@@ -842,7 +842,7 @@ body {
   .main__blog_cardsmall-6 {
     max-width: 350px;
     margin-top: 24px;
-    /* margin-right: 24px; */
+
     cursor: pointer;
   }
 
@@ -976,7 +976,7 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media only screen and (320px <= width <= 413px) {
   .header {
     max-width: 320px;
   }
@@ -993,6 +993,8 @@ body {
   .main__wrapper,
   .footer__wrapper {
     max-width: 288px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
   .main__blog_heading {
     font-size: 24px;
@@ -1016,7 +1018,6 @@ body {
     height: 314px;
   }
   .card-2 {
-    order: -1;
     margin-bottom: 16px;
   }
   .main__blog_cardsmall-1,
