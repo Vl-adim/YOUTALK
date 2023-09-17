@@ -740,6 +740,7 @@ ul {
 
 .footer__content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 
@@ -872,8 +873,8 @@ ul {
 
 @media (max-width: 1024px) {
   .header__wrapper {
-    min-width: 960px;
-    margin-left: 32px;
+    max-width: 962px;
+    margin-left: 50px;
   }
   nav {
     margin-right: 20px;
@@ -1035,7 +1036,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (768px <= width <= 1023px) {
   .header__wrapper {
     max-width: 768px;
     display: flex;
@@ -1213,17 +1214,29 @@ ul {
   }
 }
 
-@media (max-width: 414px) {
+@media only screen and (414px <= width <= 767px) {
   .header__wrapper {
     max-width: 414px;
+    display: flex;
+    margin-left: 24px;
+  }
+  nav {
+    display: none;
+  }
+  .header__wrapper_button {
+    display: none;
   }
   .header__wrapper_logo-img {
     width: 48px;
     height: 34px;
   }
   .header__wrapper_img-logo::after {
-    margin-left: 289px;
+    content: url(../images/svg/burger-menu.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    margin-left: 304px;
     margin-bottom: 31px;
+    padding-bottom: 16px;
   }
 
   .main__wrapper {
@@ -1235,6 +1248,7 @@ ul {
   .main__wrapper_section {
     max-width: 374px;
     width: 100%;
+    margin-left: 0;
   }
 
   .pseudo__item {
@@ -1242,7 +1256,7 @@ ul {
   }
 
   .pseudo__scr::after {
-    content: "Как не утонуть в тревоге и управл..";
+    content: "Как не утонуть в тревоге и управ...";
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
@@ -1292,7 +1306,10 @@ ul {
     margin-bottom: 16px;
   }
   .main__wrapper_section-advices-6 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
   }
   .main__wrapper_section-advices-6-img {
     width: 374px;
@@ -1307,6 +1324,8 @@ ul {
   .main__wrapper_sidesection {
     display: flex;
     flex-direction: column;
+    max-width: 374px;
+    margin-top: 8px;
   }
   .main__wrapper_sidesection-cart {
     max-width: 374px;
@@ -1339,7 +1358,7 @@ ul {
   }
   .main__wrapper_sidesection-cart-3 {
     display: block;
-    background-image: url(../images/svg/article-img-care.png);
+    background-image: url(../images/svg/article-img-care.svg);
     background-repeat: no-repeat;
     max-width: 374px;
     max-height: 292px;
@@ -1372,6 +1391,8 @@ ul {
   }
   .footer__wrapper {
     max-width: 374px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   .footer__nav {
     justify-content: space-between;
@@ -1393,11 +1414,30 @@ ul {
   }
 }
 
-@media (max-width: 320px) {
+@media only screen and (320px <= width <= 413px) {
+  .header {
+    max-width: 320px;
+  }
+  nav {
+    display: none;
+  }
+  .header__wrapper_button {
+    display: none;
+  }
   .header__wrapper {
-    max-width: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 288px;
+    margin-left: 16px;
+  }
+  .header__wrapper_img-logo {
+    margin: 11px 0;
   }
   .header__wrapper_img-logo::after {
+    content: url(../images/svg/burger-menu.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
     margin-left: 219px;
   }
   .main__wrapper {
@@ -1412,7 +1452,9 @@ ul {
     margin-left: 0em;
     margin-right: 1em;
   }
-
+  .pseudo__item {
+    display: none;
+  }
   .pseudo__scr::after {
     content: "Как не утонуть в тр...";
     font-family: "Montserrat";
@@ -1441,6 +1483,9 @@ ul {
   .main__wrapper_section-advices-txt {
     max-width: 250px;
   }
+  .main__wrapper_section-advices-2-txt {
+    margin: 0;
+  }
   .people__img {
     max-width: 288px;
     width: 100%;
@@ -1449,12 +1494,19 @@ ul {
   .main__wrapper_section-advices-heading {
     background-position-x: 20px;
   }
+  .main__wrapper_section-advices-2 {
+    background-position: 14px;
+  }
   .main__wrapper_section-advices-3-img {
     max-width: 288px;
   }
   .main__wrapper_section-advices-heading {
     font-size: 18px;
     line-height: 26px;
+  }
+  .main__wrapper_section-advices-5 {
+    display: flex;
+    flex-direction: column;
   }
   .main__wrapper_section-advices-6-img {
     max-width: 288px;
@@ -1468,8 +1520,7 @@ ul {
 
   .main__wrapper_sidesection {
     max-width: 288px;
-    margin-left: 0em;
-    margin-right: 1em;
+    margin-top: 0;
   }
   .main__wrapper_sidesection-cart {
     max-width: 238px;
@@ -1521,6 +1572,8 @@ ul {
   }
   .footer__wrapper {
     max-width: 288px;
+    margin-right: 16px;
+    margin-left: 16px;
   }
   .footer__nav {
     justify-content: space-between;
